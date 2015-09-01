@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatNotificationView" customModule="NotificationBannerSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icU-qy-Dfr" userLabel="containerView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-Ws-kII">
+                            <rect key="frame" x="16" y="8" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="8oH-5R-JsL"/>
+                                <constraint firstAttribute="width" constant="25" id="gcM-Po-puy"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <real key="value" value="12.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpU-AW-QLM">
+                            <rect key="frame" x="49" y="8" width="36" height="17"/>
+                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe5-G2-yPp">
+                            <rect key="frame" x="49" y="27" width="262" height="33"/>
+                            <string key="text">Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message</string>
+                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffI-F0-ea5">
+                            <rect key="frame" x="331" y="0.0" width="44" height="68"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Rsh-3z-evX"/>
+                            </constraints>
+                            <state key="normal" title="X">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="crossButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="dsP-Ha-0r6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Qe5-G2-yPp" secondAttribute="bottom" constant="8" id="3do-x6-qnG"/>
+                        <constraint firstItem="OpU-AW-QLM" firstAttribute="top" secondItem="icU-qy-Dfr" secondAttribute="top" constant="8" id="CaS-Cc-cSi"/>
+                        <constraint firstItem="ffI-F0-ea5" firstAttribute="top" secondItem="icU-qy-Dfr" secondAttribute="top" id="Js3-j0-86g"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OpU-AW-QLM" secondAttribute="trailing" constant="60" id="Khu-3e-w8t"/>
+                        <constraint firstItem="Tm8-Ws-kII" firstAttribute="top" secondItem="icU-qy-Dfr" secondAttribute="top" constant="8" id="MUg-5Q-aUM"/>
+                        <constraint firstItem="Tm8-Ws-kII" firstAttribute="leading" secondItem="icU-qy-Dfr" secondAttribute="leading" constant="16" id="Pef-Ge-MFg"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qe5-G2-yPp" secondAttribute="trailing" constant="60" id="SNW-fL-dQB"/>
+                        <constraint firstItem="Qe5-G2-yPp" firstAttribute="leading" secondItem="icU-qy-Dfr" secondAttribute="leading" constant="49" id="Z75-9a-jBs"/>
+                        <constraint firstAttribute="bottom" secondItem="ffI-F0-ea5" secondAttribute="bottom" id="bT9-6P-TPX"/>
+                        <constraint firstItem="OpU-AW-QLM" firstAttribute="leading" secondItem="Tm8-Ws-kII" secondAttribute="trailing" constant="8" id="cpz-ew-Dhj"/>
+                        <constraint firstItem="Qe5-G2-yPp" firstAttribute="top" secondItem="icU-qy-Dfr" secondAttribute="top" constant="27" id="nHR-yb-4L3"/>
+                        <constraint firstAttribute="trailing" secondItem="ffI-F0-ea5" secondAttribute="trailing" id="xPt-Yx-RFJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="icU-qy-Dfr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BrC-pS-WLS"/>
+                <constraint firstAttribute="trailing" secondItem="icU-qy-Dfr" secondAttribute="trailing" id="CXk-An-5XR"/>
+                <constraint firstAttribute="bottom" secondItem="icU-qy-Dfr" secondAttribute="bottom" id="LAT-fG-OKT"/>
+                <constraint firstItem="icU-qy-Dfr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="g1k-YN-aib"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="icU-qy-Dfr" id="Kb0-8f-7Xt"/>
+                <outlet property="messageLabel" destination="Qe5-G2-yPp" id="U20-z5-R7u"/>
+                <outlet property="nameLabel" destination="OpU-AW-QLM" id="hUn-U1-Mkl"/>
+                <outlet property="thumbImageView" destination="Tm8-Ws-kII" id="9bZ-Ne-3Zz"/>
+            </connections>
+            <point key="canvasLocation" x="158.5" y="99"/>
+        </view>
+    </objects>
+</document>
