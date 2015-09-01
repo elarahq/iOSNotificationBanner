@@ -13,7 +13,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icU-qy-Dfr" userLabel="containerView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-Ws-kII">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-Ws-kII">
                             <rect key="frame" x="16" y="8" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="8oH-5R-JsL"/>
@@ -26,13 +26,13 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpU-AW-QLM">
-                            <rect key="frame" x="49" y="8" width="36" height="17"/>
+                            <rect key="frame" x="49" y="8" width="36" height="16.5"/>
                             <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe5-G2-yPp">
-                            <rect key="frame" x="49" y="27" width="262" height="33"/>
+                            <rect key="frame" x="49" y="27" width="261.5" height="33"/>
                             <string key="text">Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message</string>
                             <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,4 +87,7 @@
             <point key="canvasLocation" x="158.5" y="99"/>
         </view>
     </objects>
+    <resources>
+        <image name="thumb.png" width="25" height="25"/>
+    </resources>
 </document>

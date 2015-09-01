@@ -11,7 +11,7 @@ import NotificationBanner
 
 class ViewController: UIViewController {
     let defaultCenter = NotificationBannerCenter.defaultCenter
-    
+    var i = 0;
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: "showNotification")
@@ -22,12 +22,15 @@ class ViewController: UIViewController {
         
         let chatNotificationView = ChatNotificationView.loadFromNib()
         chatNotificationView.nameLabel.text = "Ankit Aggarwal"
-        chatNotificationView.messageLabel.text = "Hey how are you how do you do I am fine ok whatever man dont kill me plzzzzz"
+        
+        i = i + 1
+        
+        chatNotificationView.messageLabel.text =  "\(i) Hey how are you how do you do I am fine ok whatever man dont kill me plzzzzz"
         chatNotificationView.thumbImageView.image = UIImage(named: "thumb")
         
-        let nbModel = NBModel(context: "hey", viewToShow: chatNotificationView)
+        let nbModel = NBModel(context: "1", viewToShow: chatNotificationView)
         
-        defaultCenter.showNewNotification(nbModel)
+        defaultCenter.enQueueNotification(nbModel)
     }
     
     override func viewDidAppear(animated: Bool) {
