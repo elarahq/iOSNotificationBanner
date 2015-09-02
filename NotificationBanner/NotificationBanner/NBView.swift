@@ -12,7 +12,7 @@ public class NBView: UIView {
 
     public func closeNotification() {
         
-        NotificationBannerCenter.defaultCenter.closeCurrentNotification()
+        NotificationBannerCenter.defaultCenter.closeNotification(self, shouldDequeueNotifications: false)
         
         
         

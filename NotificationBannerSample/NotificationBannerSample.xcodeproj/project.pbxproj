@@ -18,6 +18,7 @@
 		BC6BEBDD1B959B7500028411 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6BEBDB1B959B7500028411 /* LaunchScreen.xib */; };
 		BC6BEBE91B959B7500028411 /* NotificationBannerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BEBE81B959B7500028411 /* NotificationBannerSampleTests.swift */; };
 		BC7945CF1B95D9D300C02F97 /* ChatNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7945CE1B95D9D300C02F97 /* ChatNotificationView.swift */; };
+		BC7945D61B960B8300C02F97 /* thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7945D51B960B8300C02F97 /* thumb@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		BC6BEBE71B959B7500028411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6BEBE81B959B7500028411 /* NotificationBannerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerSampleTests.swift; sourceTree = "<group>"; };
 		BC7945CE1B95D9D300C02F97 /* ChatNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatNotificationView.swift; sourceTree = "<group>"; };
+		BC7945D51B960B8300C02F97 /* thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		BC6BEBCF1B959B7500028411 /* NotificationBannerSample */ = {
 			isa = PBXGroup;
 			children = (
+				BC7945D51B960B8300C02F97 /* thumb@2x.png */,
 				BC6BEBD21B959B7500028411 /* AppDelegate.swift */,
 				BC6BEBD41B959B7500028411 /* ViewController.swift */,
 				BC6BEBD61B959B7500028411 /* Main.storyboard */,
@@ -283,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7945D61B960B8300C02F97 /* thumb@2x.png in Resources */,
 				BC6BEBD81B959B7500028411 /* Main.storyboard in Resources */,
 				BC6BEBDD1B959B7500028411 /* LaunchScreen.xib in Resources */,
 				BC6BEBDA1B959B7500028411 /* Images.xcassets in Resources */,

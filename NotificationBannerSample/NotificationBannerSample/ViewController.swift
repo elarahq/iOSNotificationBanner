@@ -28,9 +28,7 @@ class ViewController: UIViewController {
         chatNotificationView.messageLabel.text =  "\(i) Hey how are you how do you do I am fine ok whatever man dont kill me plzzzzz"
         chatNotificationView.thumbImageView.image = UIImage(named: "thumb")
         
-        let nbModel = NBModel(context: "1", viewToShow: chatNotificationView)
-        
-        defaultCenter.enQueueNotification(nbModel)
+        defaultCenter.enQueueNotification(chatNotificationView)
     }
     
     override func viewDidAppear(animated: Bool) {

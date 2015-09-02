@@ -11,7 +11,6 @@
 		BC6BEBAE1B959B6000028411 /* NotificationBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6BEBAD1B959B6000028411 /* NotificationBanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC6BEBB41B959B6000028411 /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6BEBA81B959B6000028411 /* NotificationBanner.framework */; };
 		BC6BEBBB1B959B6000028411 /* NotificationBannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BEBBA1B959B6000028411 /* NotificationBannerTests.swift */; };
-		BC7945CD1B95D90800C02F97 /* NBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7945CC1B95D90800C02F97 /* NBModel.swift */; };
 		BC7945D21B95DD3800C02F97 /* NBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7945D11B95DD3800C02F97 /* NBView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		BC6BEBB31B959B6000028411 /* NotificationBannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationBannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6BEBB91B959B6000028411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6BEBBA1B959B6000028411 /* NotificationBannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerTests.swift; sourceTree = "<group>"; };
-		BC7945CC1B95D90800C02F97 /* NBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBModel.swift; sourceTree = "<group>"; };
 		BC7945D11B95DD3800C02F97 /* NBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,10 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				BC0DAA2A1B95A0360022F0DD /* NotificationBannerCenter.swift */,
+				BC7945D11B95DD3800C02F97 /* NBView.swift */,
 				BC6BEBAD1B959B6000028411 /* NotificationBanner.h */,
 				BC6BEBAB1B959B6000028411 /* Supporting Files */,
-				BC7945CC1B95D90800C02F97 /* NBModel.swift */,
-				BC7945D11B95DD3800C02F97 /* NBView.swift */,
 			);
 			path = NotificationBanner;
 			sourceTree = "<group>";
@@ -221,7 +218,6 @@
 			files = (
 				BC7945D21B95DD3800C02F97 /* NBView.swift in Sources */,
 				BC0DAA2B1B95A0360022F0DD /* NotificationBannerCenter.swift in Sources */,
-				BC7945CD1B95D90800C02F97 /* NBModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
