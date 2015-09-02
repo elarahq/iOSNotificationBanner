@@ -82,11 +82,13 @@ public class NotificationBannerCenter: NSObject {
         if let foundIndex = indexOfNotification {
             self.notificationQueue.removeAtIndex(foundIndex)
         } else {
-            if(shouldDequeueNotifications) {
-                self.isShowing = false
-                self.dequeueNotifications()
+            if self.notificationWindow.subviews.first == nil {
+                if(shouldDequeueNotifications) {
+                    self.isShowing = false
+                    self.dequeueNotifications()
+                }
+                return;
             }
-            return;
         }
         
         let notificationView = nbView
