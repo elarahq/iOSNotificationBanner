@@ -32,7 +32,7 @@ public class NBView: UIView {
         self.addGestureRecognizer(tapGesture)
     }
     
-    public func viewTapped() {
+    func viewTapped() {
         self.tapGesture.enabled = false
         if self.tapClosure != nil {
             self.tapClosure(self)

@@ -11,10 +11,16 @@ import UIKit
 
 public class NotificationBannerCenter: NSObject {
 
+    /// Notification Window on which notifications are added and presented
     let notificationWindow: UIWindow
+    
     /// Returns default shared instance of the notification banner center
     static public let defaultCenter = NotificationBannerCenter()
+    
+    /// Notification queue which holds the notifications to be displayed
     var notificationQueue: Array<NBView> = []
+    
+    /// is `true` if notification is being presented
     var isShowing: Bool = false
     
     override init() {
