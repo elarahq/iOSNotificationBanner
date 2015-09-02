@@ -12,6 +12,8 @@ public class NBView: UIView {
     
     /// Context can be used to indentify and cancel enQueued notifications
     public var context: String = ""
+    
+    /// Use this closure to handle the touch event on the notification view, will be called only once even on multiple taps.
     public var tapClosure:((NBView)->Void)!
     
     var tapGesture: UITapGestureRecognizer!
