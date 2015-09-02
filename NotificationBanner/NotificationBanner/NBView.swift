@@ -9,14 +9,10 @@
 import UIKit
 
 public class NBView: UIView {
-
-    public func closeNotification() {
-        
-        NotificationBannerCenter.defaultCenter.closeNotification(self, shouldDequeueNotifications: false)
-        
-        
-        
-    }
     
-
+    public var context: String = ""
+    
+    public func closeNotification() {
+        NotificationBannerCenter.defaultCenter.closeNotification(self, shouldDequeueNotifications: false)
+    }
 }

@@ -10,32 +10,32 @@ import UIKit
 import NotificationBanner
 
 class ViewController: UIViewController {
-    let defaultCenter = NotificationBannerCenter.defaultCenter
+    
+    let notificationCenter = NotificationBannerCenter.defaultCenter
     var i = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: "showNotification")
-        self.view.addGestureRecognizer(tapGesture)
     }
     
-    func showNotification () {
-        
-        let chatNotificationView = ChatNotificationView.loadFromNib()
-        chatNotificationView.nameLabel.text = "Ankit Aggarwal"
-        
+    @IBAction func addNotification(sender: AnyObject) {
         i = i + 1
         
-        chatNotificationView.messageLabel.text =  "\(i) Hey how are you how do you do I am fine ok whatever man dont kill me plzzzzz"
-        chatNotificationView.thumbImageView.image = UIImage(named: "thumb")
+        let chatNotificationView = ChatNotificationView.loadFromNib()
+        chatNotificationView.nameLabel.text = "John Doe"
+        chatNotificationView.messageLabel.text =  "\(i) Hey, My name is John Doe!"
+        chatNotificationView.thumbImageView.image = UIImage(named: "johndoe.jpg")
+        chatNotificationView.context = "\(i)"
         
-        defaultCenter.enQueueNotification(chatNotificationView)
+        notificationCenter.enQueueNotification(chatNotificationView)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    @IBAction func cancelEvenNotification(sender: AnyObject) {
         
     }
     
+    @IBAction func cancelOddNotification(sender: AnyObject) {
+        
+    }
 }
 

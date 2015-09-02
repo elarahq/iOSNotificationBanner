@@ -45,21 +45,54 @@
                                     <constraint firstAttribute="height" constant="68" id="Apt-wJ-GOa"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-2R-sVh">
+                                <rect key="frame" x="241" y="251" width="118" height="30"/>
+                                <state key="normal" title="Add Notifications">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNotification:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nem-My-ogA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRA-7Z-p1Z">
+                                <rect key="frame" x="214" y="285" width="172" height="30"/>
+                                <state key="normal" title="Cancel Odd Notifications">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelOddNotification:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5ad-j7-iho"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo5-U6-V94">
+                                <rect key="frame" x="212" y="319" width="176" height="30"/>
+                                <state key="normal" title="Cancel Even Notifications">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelEvenNotification:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fnF-lo-jdo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="eRA-7Z-p1Z" secondAttribute="centerY" id="0xP-Q5-VGM"/>
                             <constraint firstItem="3Rj-US-OXM" firstAttribute="width" secondItem="xxF-b1-n5z" secondAttribute="width" id="2Yb-si-zXK"/>
                             <constraint firstItem="Zpg-Co-etJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="4Md-D4-6oa"/>
+                            <constraint firstAttribute="centerY" secondItem="Uo5-U6-V94" secondAttribute="centerY" constant="-34" id="5kv-YP-kKE"/>
                             <constraint firstItem="o8Q-h4-kFP" firstAttribute="leading" secondItem="Zpg-Co-etJ" secondAttribute="trailing" id="8lV-lY-E4L"/>
                             <constraint firstItem="Zpg-Co-etJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ADx-S6-BGO"/>
                             <constraint firstItem="3Rj-US-OXM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="AtX-8u-mtD"/>
                             <constraint firstItem="xxF-b1-n5z" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="B5l-6M-ou1"/>
+                            <constraint firstAttribute="centerX" secondItem="Uo5-U6-V94" secondAttribute="centerX" id="HtK-9I-g1n"/>
                             <constraint firstItem="Zpg-Co-etJ" firstAttribute="leading" secondItem="3Rj-US-OXM" secondAttribute="trailing" id="Kjo-8U-KcU"/>
                             <constraint firstItem="3Rj-US-OXM" firstAttribute="width" secondItem="Zpg-Co-etJ" secondAttribute="width" id="MwO-6P-kDr"/>
+                            <constraint firstAttribute="centerX" secondItem="eRA-7Z-p1Z" secondAttribute="centerX" id="VjH-vr-erw"/>
                             <constraint firstItem="3Rj-US-OXM" firstAttribute="width" secondItem="o8Q-h4-kFP" secondAttribute="width" id="Vtk-pM-qdA"/>
                             <constraint firstAttribute="trailing" secondItem="o8Q-h4-kFP" secondAttribute="trailing" id="dcy-HS-BPG"/>
                             <constraint firstItem="xxF-b1-n5z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="f7d-1p-hxD"/>
+                            <constraint firstAttribute="centerX" secondItem="tfP-2R-sVh" secondAttribute="centerX" id="jOr-8Y-nx6"/>
                             <constraint firstItem="3Rj-US-OXM" firstAttribute="leading" secondItem="xxF-b1-n5z" secondAttribute="trailing" id="u5P-Hx-xxc"/>
+                            <constraint firstAttribute="centerY" secondItem="tfP-2R-sVh" secondAttribute="centerY" constant="34" id="v1n-x1-yiT"/>
                             <constraint firstItem="o8Q-h4-kFP" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zAl-Yx-yj9"/>
                         </constraints>
                         <variation key="default">

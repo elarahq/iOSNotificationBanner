@@ -14,11 +14,7 @@ public class NotificationBannerCenter: NSObject {
     let notificationWindow: UIWindow
     static public let defaultCenter = NotificationBannerCenter()
     var notificationQueue: Array<NBView> = []
-    var isShowing: Bool = false {
-        didSet {
-            println("Changing isShowing to \(isShowing)")
-        }
-    }
+    var isShowing: Bool = false
     
     override init() {
         self.notificationWindow = UIWindow(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 68))
@@ -57,6 +53,27 @@ public class NotificationBannerCenter: NSObject {
                     self.closeNotification(nbView, shouldDequeueNotifications: true)
                 }
         })
+    }
+    
+    func cancelNotifications(notifications: [NBView]) {
+        for view in notifications {
+            let indexOfNotification = find(self.notificationQueue, view)
+            if let foundIndex = indexOfNotification {
+                self.notificationQueue.removeAtIndex(foundIndex)
+            }
+        }
+    }
+    
+    public func cancelNotificationsWithContexts(contexts: [String]) {
+        var notifications: [NBView] = []
+        for context in contexts {
+            for notification in self.notificationQueue {
+                if context == notification.context {
+                    notifications.append(notification)
+                }
+            }
+        }
+        self.cancelNotifications(notifications)
     }
     
     func closeNotification(nbView: NBView, shouldDequeueNotifications: Bool) {
