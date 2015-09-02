@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         chatNotificationView.messageLabel.text =  "\(num) Hey, My name is John Doe!"
         chatNotificationView.thumbImageView.image = UIImage(named: "johndoe.jpg")
         chatNotificationView.context = "\(num)"
+        chatNotificationView.tapClosure = { (nbView: NBView) in
+            println((nbView as! ChatNotificationView).messageLabel.text)
+        }
         
         notificationCenter.enQueueNotification(chatNotificationView)
     }

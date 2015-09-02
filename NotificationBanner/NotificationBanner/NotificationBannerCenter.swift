@@ -10,8 +10,9 @@
 import UIKit
 
 public class NotificationBannerCenter: NSObject {
-    
+
     let notificationWindow: UIWindow
+    /// Returns default shared instance of the notification banner center
     static public let defaultCenter = NotificationBannerCenter()
     var notificationQueue: Array<NBView> = []
     var isShowing: Bool = false
@@ -22,7 +23,12 @@ public class NotificationBannerCenter: NSObject {
         self.notificationWindow.windowLevel = UIWindowLevelStatusBar
         self.notificationWindow.backgroundColor = UIColor.clearColor()
     }
+
+    /**
+    Will enqueue notifications to display on the top of the screen
     
+    :param: nbView object of the notification view which has to be shown
+    */
     public func enQueueNotification(nbView: NBView) {
         self.notificationQueue.append(nbView)
         if(self.notificationQueue.count == 1) {
@@ -30,6 +36,9 @@ public class NotificationBannerCenter: NSObject {
         }
     }
     
+    /**
+    Starts dequeuing the notifications one by one
+    */
     func dequeueNotifications() {
         
         if(!(notificationQueue.count > 0) || self.isShowing) {
@@ -55,6 +64,11 @@ public class NotificationBannerCenter: NSObject {
         })
     }
     
+    /**
+    Cancels the future notification
+    
+    :param: notifications Array of notification objects which are to be cancelled
+    */
     func cancelNotifications(notifications: [NBView]) {
         for view in notifications {
             let indexOfNotification = find(self.notificationQueue, view)
@@ -64,6 +78,11 @@ public class NotificationBannerCenter: NSObject {
         }
     }
     
+    /**
+    Notifications can be cancelled by providing an array of context that might be set before enQueueing a notification
+    
+    :param: contexts Array of context
+    */
     public func cancelNotificationsWithContexts(contexts: [String]) {
         var notifications: [NBView] = []
         for context in contexts {
@@ -76,6 +95,12 @@ public class NotificationBannerCenter: NSObject {
         self.cancelNotifications(notifications)
     }
     
+    /**
+    Closes a shown notification
+    
+    :param: nbView                     notification view object to be closed
+    :param: shouldDequeueNotifications should dequeue other notifications after dequeuing the current notification
+    */
     func closeNotification(nbView: NBView, shouldDequeueNotifications: Bool) {
         
         let indexOfNotification = find(self.notificationQueue, nbView)
