@@ -33,7 +33,7 @@ public class NotificationBannerCenter: NSObject {
     /**
     Will enqueue notifications to display on the top of the screen
     
-    :param: nbView object of the notification view which has to be shown
+    - parameter nbView: object of the notification view which has to be shown
     */
     public func enQueueNotification(nbView: NBView) {
         self.notificationQueue.append(nbView)
@@ -73,11 +73,11 @@ public class NotificationBannerCenter: NSObject {
     /**
     Cancels the future notification
     
-    :param: notifications Array of notification objects which are to be cancelled
+    - parameter notifications: Array of notification objects which are to be cancelled
     */
     func cancelNotifications(notifications: [NBView]) {
         for view in notifications {
-            let indexOfNotification = find(self.notificationQueue, view)
+            let indexOfNotification = self.notificationQueue.indexOf(view)
             if let foundIndex = indexOfNotification {
                 self.notificationQueue.removeAtIndex(foundIndex)
             }
@@ -87,7 +87,7 @@ public class NotificationBannerCenter: NSObject {
     /**
     Notifications can be cancelled by providing an array of context that might be set before enQueueing a notification
     
-    :param: contexts Array of context
+    - parameter contexts: Array of context
     */
     public func cancelNotificationsWithContexts(contexts: [String]) {
         var notifications: [NBView] = []
@@ -104,12 +104,12 @@ public class NotificationBannerCenter: NSObject {
     /**
     Closes a shown notification
     
-    :param: nbView                     notification view object to be closed
-    :param: shouldDequeueNotifications should dequeue other notifications after dequeuing the current notification
+    - parameter nbView:                     notification view object to be closed
+    - parameter shouldDequeueNotifications: should dequeue other notifications after dequeuing the current notification
     */
     func closeNotification(nbView: NBView, shouldDequeueNotifications: Bool) {
         
-        let indexOfNotification = find(self.notificationQueue, nbView)
+        let indexOfNotification = self.notificationQueue.indexOf(nbView)
         if let foundIndex = indexOfNotification {
             self.notificationQueue.removeAtIndex(foundIndex)
         } else {
